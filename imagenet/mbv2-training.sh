@@ -6,9 +6,9 @@ python main.py \
 --world-size 1 \
 --rank 0 \
 --workers 16 \
---batch-size  164 \
+--batch-size  192 \
 --multiprocessing-distributed \
-/workspace/downloads/ILSVRC2012
+/dataset/ILSVRC2012
 
 
 python main.py \
