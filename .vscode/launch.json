@@ -1,0 +1,31 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "train mobilenetv2 on imagenet on single machine with two gpus",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "cwd":"/workspace/examples/imagenet/",
+            "args": [
+                "--arch", "mobilenet_v2",
+                "--dist-url", "tcp://127.0.0.1:1234",
+                "--dist-backend", "nccl",
+                "--world-size", "1",
+                "--rank", "0",
+                "--workers", "16",
+                "--epochs", "90",
+                "--batch-size", "192",
+                "--multiprocessing-distributed",
+                "/dataset/ILSVRC2012"
+            ],
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "justMyCode": false,
+        },
+
+    ]
+}
