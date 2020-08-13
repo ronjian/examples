@@ -1,14 +1,14 @@
-python main.py \
+nohup python -u main.py \
 --arch mobilenet_v2 \
 --dist-url 'tcp://127.0.0.1:1234' \
 --dist-backend 'nccl' \
 --world-size 1 \
 --rank 0 \
---workers 16 \
+--workers 12 \
 --epochs 90 \
---batch-size  192 \
+--batch-size  128 \
 --multiprocessing-distributed \
-/dataset/ILSVRC2012
+/dataset/ILSVRC2012 > training_mobilenet_v2.log 2>&1 &
 
 
 python main.py \

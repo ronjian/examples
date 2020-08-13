@@ -16,7 +16,7 @@
                 "--dist-backend", "nccl",
                 "--world-size", "1",
                 "--rank", "0",
-                "--workers", "16",
+                "--workers", "8",
                 "--epochs", "90",
                 "--batch-size", "192",
                 "--multiprocessing-distributed",
